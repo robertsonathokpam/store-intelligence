@@ -1,0 +1,17 @@
+# Ignore raw CCTV video clips
+*.mp4
+
+# Ignore pre-trained model weights (downloaded automatically by YOLOv8)
+*.pt
+
+# Ignore python caches and runtime outputs
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+output_events.jsonl
+
+# Ignore local environment files
+.env
+.venv/
+env/
