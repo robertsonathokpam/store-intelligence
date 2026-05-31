@@ -11,6 +11,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the app code
 COPY app/ .
 
+# Create data directory for POS transaction files
+RUN mkdir -p data
+
+# Copy POS transaction data for conversion-rate correlation (if available)
+# Use a shell form to handle cases where hackathon-resources may not exist
+COPY hackathon-resource[s]/*.csv data/
+
 # Copy the tests code
 COPY tests/ tests/
 

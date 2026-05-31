@@ -1,4 +1,4 @@
-# Ignore raw CCTV video clips
+# Ignore raw CCTV video clips (too large for Git)
 *.mp4
 
 # Ignore pre-trained model weights (downloaded automatically by YOLOv8)
@@ -15,3 +15,8 @@ output_events.jsonl
 .env
 .venv/
 env/
+
+# Ignore IDE / editor files
+.idea/
+.vscode/
+*.swp
