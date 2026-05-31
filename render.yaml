@@ -1,10 +1,8 @@
 services:
   - type: web
     name: store-intelligence-api
-    runtime: docker
+    env: docker
     plan: free
-    dockercontext: .
-    dockerfile: Dockerfile
     envVars:
       - key: PORT
-        value: 8000
+        value: "8000"
