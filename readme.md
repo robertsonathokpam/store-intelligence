@@ -1,4 +1,4 @@
-# Store Intelligence System - Purplle Tech Challenge 2026
+# Retail Intelligence System - Purplle Tech Challenge 2026
 
 An end-to-end analytics pipeline that converts raw CCTV footage into structured, real-time business intelligence using YOLOv8, ByteTrack, and FastAPI. The ultimate business goal is measuring and optimizing the **Offline Store Conversion Rate**.
 
@@ -84,7 +84,7 @@ cd app && python -m pytest --cov=. tests/
 ## 📁 Project Structure
 
 ```
-store-intelligence/
+retail-intelligence-system(purplle-tech-challenge-2026)/
 ├── pipeline/
 │   ├── detect.py          # YOLOv8 + ByteTrack detection + event generation
 │   ├── emit.py            # Batched event emitter to API

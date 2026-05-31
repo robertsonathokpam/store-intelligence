@@ -54,7 +54,7 @@ export default function App() {
     <div className="dashboard-container">
       <header className="dashboard-header">
         <div>
-          <h1 className="dashboard-title">Store Intelligence</h1>
+          <h1 className="dashboard-title">Retail Intelligence</h1>
           <p className="dashboard-subtitle">Purplle Tech Challenge \u2014 Live Analytics</p>
         </div>
         

@@ -1,4 +1,4 @@
-# PROMPT: "Generate comprehensive pytest tests for a FastAPI Store Intelligence API with endpoints:
+# PROMPT: "Generate comprehensive pytest tests for a FastAPI Retail Intelligence API with endpoints:
 # GET /health, POST /events/ingest (batch ≤500, idempotent), GET /stores/{id}/metrics,
 # GET /stores/{id}/funnel, GET /stores/{id}/heatmap, GET /stores/{id}/anomalies.
 # Cover: schema validation, idempotency, staff filtering, conversion/dwell calculations,

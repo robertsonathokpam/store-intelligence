@@ -1,4 +1,4 @@
-# Store Intelligence System Architecture
+# Retail Intelligence System Architecture
 
 ## Overview
 

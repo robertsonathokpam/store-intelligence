@@ -343,7 +343,7 @@ def flag_staff(events, total_frames, visitor_frame_counts):
 # ── Main ──────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="Store Intelligence — Detection Pipeline")
+    parser = argparse.ArgumentParser(description="Retail Intelligence — Detection Pipeline")
     parser.add_argument("--video", type=str, default=None, help="Process a single video file")
     parser.add_argument("--output", type=str, default=OUTPUT_FILE, help="Output JSONL file")
     parser.add_argument("--store-id", type=str, default=STORE_ID, help="Store identifier")
@@ -361,7 +361,7 @@ def main():
         print("ERROR: No video files found. Place CAM *.mp4 files in the project root.")
         sys.exit(1)
 
-    print(f"╔══ Store Intelligence Detection Pipeline ══╗")
+    print(f"╔══ Retail Intelligence Detection Pipeline ══╗")
     print(f"║  Store:  {store_id}")
     print(f"║  Clips:  {len(clips)} camera(s)")
     print(f"╚═══════════════════════════════════════════╝\n")

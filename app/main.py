@@ -1,5 +1,5 @@
 """
-Store Intelligence API — FastAPI entrypoint.
+Retail Intelligence API — FastAPI entrypoint.
 
 Endpoints:
     GET  /                              → Redirect to /docs
@@ -61,7 +61,7 @@ async def lifespan(app):
 
 
 # ── Application ──────────────────────────────────────────────────────
-app = FastAPI(title="Store Intelligence API", lifespan=lifespan)
+app = FastAPI(title="Retail Intelligence API", lifespan=lifespan)
 
 # Allow CORS for dashboard
 app.add_middleware(
