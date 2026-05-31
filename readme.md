@@ -4,7 +4,7 @@ An end-to-end analytics pipeline that converts raw CCTV footage into structured,
 
 ---
 
-## 🚀 Setup & Run
+## Setup & Run
 
 ### 1. Start the Intelligence API (Docker)
 Build and start the FastAPI service in the background:
@@ -50,7 +50,7 @@ Open your browser and navigate to the analytics endpoints:
 
 ---
 
-## 📊 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |:---|:---|:---|
@@ -63,7 +63,7 @@ Open your browser and navigate to the analytics endpoints:
 
 ---
 
-## 🧪 Testing and Coverage
+## Testing and Coverage
 
 The test suite includes full integration and unit tests for all endpoints, idempotency, batch limits, staff filtering, conversion/dwell analytics, funnel logic, heatmap, anomalies, and edge cases.
 
