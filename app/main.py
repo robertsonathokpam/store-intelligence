@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 from datetime import datetime, timezone
 
@@ -61,6 +62,15 @@ async def lifespan(app):
 
 # ── Application ──────────────────────────────────────────────────────
 app = FastAPI(title="Store Intelligence API", lifespan=lifespan)
+
+# Allow CORS for dashboard
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # ── Middleware: structured request logging ────────────────────────────
