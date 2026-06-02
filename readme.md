@@ -36,17 +36,25 @@ Stream the batched events (chunked to a maximum of 500 events per request) to th
 python pipeline/emit.py
 ```
 
-### 5. View Live Analytics & Metrics
-Open your browser and navigate to the analytics endpoints:
+### 5. View Live Analytics & Metrics (API)
+Open your browser and navigate to the live cloud endpoints:
 
 | Endpoint | URL |
 |:---|:---|
-| **Core Metrics** | http://127.0.0.1:8000/stores/STORE_BLR_002/metrics |
-| **Conversion Funnel** | http://127.0.0.1:8000/stores/STORE_BLR_002/funnel |
-| **Zone Heatmap** | http://127.0.0.1:8000/stores/STORE_BLR_002/heatmap |
-| **Anomaly Detection** | http://127.0.0.1:8000/stores/STORE_BLR_002/anomalies |
-| **Service Health** | http://127.0.0.1:8000/health |
-| **API Documentation** | http://127.0.0.1:8000/docs |
+| **API Documentation** | https://store-intelligence-api-x283.onrender.com/docs |
+| **Core Metrics** | https://store-intelligence-api-x283.onrender.com/stores/STORE_BLR_002/metrics |
+| **Conversion Funnel** | https://store-intelligence-api-x283.onrender.com/stores/STORE_BLR_002/funnel |
+| **Zone Heatmap** | https://store-intelligence-api-x283.onrender.com/stores/STORE_BLR_002/heatmap |
+| **Anomaly Detection** | https://store-intelligence-api-x283.onrender.com/stores/STORE_BLR_002/anomalies |
+
+### 6. Run the Visual Dashboard (Frontend)
+To see a beautiful, normal-person-friendly visualization of the metrics, funnels, and heatmaps, run the included React dashboard:
+```bash
+cd dashboard
+npm install
+npm run dev
+```
+Open `http://localhost:5173` in your browser. The dashboard automatically connects to the live Render cloud API!
 
 ---
 
@@ -98,11 +106,14 @@ retail-intelligence-system(purplle-tech-challenge-2026)/
 │   ├── anomalies.py       # Anomaly detection engine
 │   ├── pos_data.py        # POS transaction loader + correlator
 │   └── requirements.txt
+├── dashboard/             # React/Vite Visual Frontend
+│   └── src/App.jsx        # Connects to live Render API to display metrics
 ├── tests/
 │   └── test_main.py       # Comprehensive test suite (prompt blocks included)
 ├── hackathon-resources/   # Store layout + POS data + problem statement
 ├── DESIGN.md              # Architecture + AI-assisted decisions
 ├── CHOICES.md             # 3 engineering decisions with full reasoning
+├── render.yaml            # Blueprint for 1-click cloud deployment
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md

@@ -43,10 +43,10 @@ def send_events(file_path: str, api_url: str, batch_size: int = 500, max_retries
                     data = response.json()
                     total_inserted += data.get("inserted", 0)
                     total_ignored += data.get("ignored_duplicates", 0)
-                    print(f"  ✅ Batch {batch_num} SUCCESS: {data}")
+                    print(f"  [OK] Batch {batch_num} SUCCESS: {data}")
                     break
                 else:
-                    print(f"  ❌ Batch {batch_num} FAILED (status {response.status_code})")
+                    print(f"  [FAIL] Batch {batch_num} FAILED (status {response.status_code})")
                     print(f"     Details: {response.text[:200]}")
                     if attempt < max_retries:
                         print(f"     Retrying ({attempt}/{max_retries})...")
@@ -54,12 +54,12 @@ def send_events(file_path: str, api_url: str, batch_size: int = 500, max_retries
                     break  # Don't retry 4xx errors
 
             except requests.exceptions.RequestException as exc:
-                print(f"  ⚠ Batch {batch_num} connection error: {exc}")
+                print(f"  [WARN] Batch {batch_num} connection error: {exc}")
                 if attempt < max_retries:
                     print(f"     Retrying in 2s ({attempt}/{max_retries})...")
                     time.sleep(2)
                 else:
-                    print(f"  ❌ Batch {batch_num} FAILED after {max_retries} retries")
+                    print(f"  [FAIL] Batch {batch_num} FAILED after {max_retries} retries")
 
     print(f"\n═══ EMIT COMPLETE ═══")
     print(f"  Total inserted:   {total_inserted}")
@@ -70,5 +70,5 @@ def send_events(file_path: str, api_url: str, batch_size: int = 500, max_retries
 if __name__ == "__main__":
     send_events(
         file_path="output_events.jsonl",
-        api_url="http://127.0.0.1:8000/events/ingest",
+        api_url="https://store-intelligence-api-x283.onrender.com/events/ingest",
     )

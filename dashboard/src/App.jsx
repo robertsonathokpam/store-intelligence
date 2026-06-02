@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import './index.css';
 
-const API_BASE = 'http://127.0.0.1:8000/stores/STORE_BLR_002';
+const API_BASE = 'https://store-intelligence-api-x283.onrender.com/stores/STORE_BLR_002';
 
 export default function App() {
   const [metrics, setMetrics] = useState(null);
